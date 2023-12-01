@@ -1,179 +1,36 @@
-.web{
-    position:fixed;
-    background-color: rgba(255, 157, 29, 0.986);
-    width: 100%;
-    text-align: center;
-    z-index: 20;
-    top: 0px;
-    left: 0px;  
-    color: white;  
-    margin: 0px;
-   
+body::before{
+    display: block;
+    content: '';
+    height: 50px;
 }
-.h11{
-    border-bottom: 5px solid white;
-    border-radius: 50%;
-    padding:0 50px 15px;
-    display: inline-block;
+@media (min-width: 768px) {
+
+    .news-input {
+
+        max-width: 50%;
+    }
 }
-
-
-.banner img{
-    max-width: 100%;
-    top: 0%;
-    left: 0%;
-
+.licolor::marker{
+    color: orange;
 }
-.banner {
-    position: relative;
-  }
-  
-  .banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ff910041; /* Replace with your desired color */
-  }
-  
-  .welcome  {
-    z-index: 3;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #ff91009d;
-    border-radius: 70px;
-    padding: 35px;
-  }
-  
-  .welcome h2 {
-    font-family:Calibri;
-    color: white;
-    font-size: 50px;
-  }
-  .welcome h2:hover{
-    color: rgba(255, 255, 255, 0.788);
-  }
-  
-  .welcome span {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  
-  nav{
-    background-color: #ff9100;
-    padding: 10px 20px;
-    text-align: center;
-    width: 100%;
-    position: sticky;
-    margin: 0px;
-    top: 95px;
-  }
-  nav ul{
+@media (max-width: 992px) {
    
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  nav li{
-   
-    width: 25%;
-    display: inline-block;
-    font-size: 25px;
-    text-align: center;
-
-  }
-  nav li a{
-    color: rgb(255, 255, 255);
-    text-decoration:none;
-    transition: color 0.5s ease;
-  }
-  nav li a:hover{
-    color: black;
-  }
-  main{
-    max-width: 100%;
-    width: 1200px;
+    .imgpaddingtop {
+      padding-top: 1rem;
+      width: 600px;
+    }
+    .instructor{
+        text-align: justify;
+    }
     
-    margin: 80px 0px;
-    box-sizing: border-box;
+    .textalign{
+        text-align: justify;
+    }
   }
-  h2{
-    margin: 20px 0px;
-    color: #ff9100;
-    font-size: 48px;
-    transition: color 0.5s ease;
-    padding: 0px 40px;
-  }
-  h2:hover{
-    color: black;
-  }
-  article{
-    padding: 10px 100px 30px 50px;
-    font-size: 20px;
-    text-align: justify;
-    transition: margin-bottom 0.5s ease;
-  }
-  article:hover{
-    margin-bottom: 50px;
-  }
- 
-  .images{
-     
-    margin:20px auto;
-  }
-  .images li{
-    display: inline-block;
-    width: 30%;
-    margin: 20px  3%;
-    white-space: nowrap;
-
-  }
-  .images img{
-    max-width: 100% ;
-    height: 250px;
-    margin: 30px 3%;
-    border-radius: 70px;
-    transition: all 0.5s ease;
-  }
-  .images img:hover{
-
-    opacity: 0.7;
-    transform: translateY(-10px);
+  @media (min-width: 992px) {
    
+    .imgpaddingtop {
+     
+      width: 400px;
+    }
   }
-  .join{
-    text-align: center;
-    background-color: rgb(235, 235, 235);
-    padding: 60px 20px;
-  }
-  .join h2{
-    font-size: 36px;
-    padding-right: 7%;
-  }
-
-  .join article{
-    text-align: center;
-  }
-  form input{
-
-    margin: 30px 20px;
-    padding: 30px 20px;
-    font-size: 25px;
-    border-radius: 20px;
-    border: 2px solid white;
-  }
-  footer { 
-    text-align: center;
-    background-color: #ff9100;
-    padding: 15px;
-    color: white;
-    font-size: 18px;
-  }
-
-
-
