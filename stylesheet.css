@@ -26,6 +26,17 @@ body::before{
     .textalign{
         text-align: justify;
     }
+    .textshowcase{
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: justify;
+    }
+    .buttonenroll{
+      margin-left: 10px;
+    }
+    .aboutusjus{
+      text-align: justify;
+    }
   }
   @media (min-width: 992px) {
    
