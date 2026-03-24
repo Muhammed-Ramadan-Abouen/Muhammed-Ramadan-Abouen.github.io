@@ -53,6 +53,7 @@ const movingCard = document.getElementById("moving-card");
 const heroCardAnchor = document.getElementById("hero-card-anchor");
 const aboutCardAnchor = document.getElementById("about-card-anchor");
 const aboutTextPanel = document.getElementById("about-text-panel");
+const flipInner = movingCard ? movingCard.querySelector(".flip-inner") : null;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function clamp(value, min, max) {
@@ -64,11 +65,12 @@ function smoothStep(value) {
 }
 
 function updateScrollCardAnimation() {
-  if (!movingCard || !heroCardAnchor || !aboutCardAnchor || !aboutTextPanel) return;
+  if (!movingCard || !heroCardAnchor || !aboutCardAnchor || !aboutTextPanel || !flipInner) return;
 
   if (window.innerWidth < 1024 || reduceMotion.matches) {
     movingCard.style.transform = "";
     movingCard.style.opacity = "";
+    flipInner.style.transform = "";
     aboutTextPanel.style.opacity = "1";
     aboutTextPanel.style.transform = "translateX(0px)";
     return;
@@ -98,13 +100,12 @@ function updateScrollCardAnimation() {
     moveX.toFixed(2) +
     "px, " +
     moveY.toFixed(2) +
-    "px, 0) rotateY(" +
-    rotateY.toFixed(2) +
-    "deg) rotateX(" +
+    "px, 0) rotateX(" +
     rotateX.toFixed(2) +
     "deg) scale(" +
     scale.toFixed(4) +
     ")";
+  flipInner.style.transform = "rotateY(" + rotateY.toFixed(2) + "deg)";
   movingCard.style.opacity = String(1 - 0.1 * easedProgress);
 
   const textProgress = clamp((easedProgress - 0.35) / 0.65, 0, 1);
