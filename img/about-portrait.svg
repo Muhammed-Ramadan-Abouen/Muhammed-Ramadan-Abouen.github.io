@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 960" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait illustration</title>
+  <desc id="desc">Abstract portrait style background for portfolio flip card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2350"/>
+      <stop offset="50%" stop-color="#29357d"/>
+      <stop offset="100%" stop-color="#10162f"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="20%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#9da5ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#9da5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="78%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#5ddfff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5ddfff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="silhouette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cfd8ff"/>
+      <stop offset="100%" stop-color="#7687d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="960" fill="url(#bg)"/>
+  <rect width="800" height="960" fill="url(#glowA)"/>
+  <rect width="800" height="960" fill="url(#glowB)"/>
+
+  <circle cx="400" cy="290" r="124" fill="url(#silhouette)" opacity="0.95"/>
+  <path
+    d="M190 860c22-162 110-250 210-250s188 88 210 250"
+    fill="url(#silhouette)"
+    opacity="0.92"
+  />
+  <path
+    d="M320 255c24-48 135-46 161 7"
+    fill="none"
+    stroke="#11182f"
+    stroke-opacity="0.32"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+  <circle cx="360" cy="286" r="8" fill="#11182f" fill-opacity="0.58"/>
+  <circle cx="442" cy="286" r="8" fill="#11182f" fill-opacity="0.58"/>
+  <path
+    d="M360 336c24 16 56 16 80 0"
+    fill="none"
+    stroke="#11182f"
+    stroke-opacity="0.5"
+    stroke-width="8"
+    stroke-linecap="round"
+  />
+</svg>

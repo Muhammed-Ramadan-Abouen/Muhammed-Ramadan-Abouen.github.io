@@ -109,29 +109,74 @@
               >
             </div>
           </div>
-          <aside class="hero-card rounded-3xl border border-white/10 bg-panel/80 p-8 shadow-glow">
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">Based in</p>
-            <p class="mt-2 text-2xl font-semibold">Skopje, Macedonia</p>
-            <p class="mt-1 text-sm text-slate-300">00:00 GMT +2</p>
-            <div class="mt-8 space-y-4 text-sm">
-              <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                <span class="text-muted">Years experience</span>
-                <span class="font-medium">13+</span>
-              </div>
-              <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                <span class="text-muted">Successful projects</span>
-                <span class="font-medium">600+</span>
-              </div>
-              <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                <span class="text-muted">Client reviews</span>
-                <span class="font-medium">130+</span>
-              </div>
-              <div class="flex items-center justify-between pb-1">
-                <span class="text-muted">Satisfaction</span>
-                <span class="font-medium">100%</span>
+          <aside id="hero-card-anchor" class="card-anchor hero-card-slot">
+            <div id="moving-card" class="moving-card">
+              <div class="flip-inner">
+                <article class="flip-face flip-front hero-card rounded-3xl border border-white/10 bg-panel/80 p-8 shadow-glow">
+                  <p class="text-xs uppercase tracking-[0.2em] text-muted">Based in</p>
+                  <p class="mt-2 text-2xl font-semibold">Skopje, Macedonia</p>
+                  <p class="mt-1 text-sm text-slate-300">00:00 GMT +2</p>
+                  <div class="mt-8 space-y-4 text-sm">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                      <span class="text-muted">Years experience</span>
+                      <span class="font-medium">13+</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                      <span class="text-muted">Successful projects</span>
+                      <span class="font-medium">600+</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                      <span class="text-muted">Client reviews</span>
+                      <span class="font-medium">130+</span>
+                    </div>
+                    <div class="flex items-center justify-between pb-1">
+                      <span class="text-muted">Satisfaction</span>
+                      <span class="font-medium">100%</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="flip-face flip-back rounded-3xl border border-white/10 bg-panel/90 p-5 shadow-glow">
+                  <img
+                    src="img/about-portrait.svg"
+                    alt="Portrait of Alex Carter"
+                    class="h-56 w-full rounded-2xl object-cover"
+                  />
+                  <p class="mt-4 text-xs uppercase tracking-[0.2em] text-muted">About me</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-200">
+                    Multidisciplinary designer blending product, brand, and growth thinking
+                    into practical systems that ship.
+                  </p>
+                </article>
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <div class="about-grid">
+          <div id="about-card-anchor" class="card-anchor about-card-slot" aria-hidden="true"></div>
+          <div id="about-text-panel" class="about-text-panel">
+            <p class="section-label">About</p>
+            <h2 class="section-title">Creative at the core</h2>
+            <p class="mt-5 text-slate-300">Designer. Marketer. Founder. Problem-solver.</p>
+            <div class="mt-4 space-y-4 leading-relaxed text-slate-300">
+              <p>
+                With more than a decade of cross-functional experience, I connect design,
+                strategy, and execution to help brands launch stronger and grow faster.
+              </p>
+              <p>
+                I focus on clear direction, practical systems, and outcomes that are tested
+                in the market, not left as concepts.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="pill">13+ Years Experience</span>
+              <span class="pill">600+ Projects</span>
+              <span class="pill">130+ Reviews</span>
+              <span class="pill">Top Graphic Voice Award</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -183,34 +228,6 @@
             </p>
             <p class="service-stack">GA4, Google Ads, Meta Ads, HubSpot, Mailchimp</p>
           </article>
-        </div>
-      </section>
-
-      <section id="about" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-        <div class="grid gap-10 rounded-3xl border border-white/10 bg-panel/50 p-8 md:p-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p class="section-label">About</p>
-            <h2 class="section-title">Creative at the core</h2>
-            <p class="mt-5 text-slate-300">
-              Designer. Marketer. Founder. Problem-solver.
-            </p>
-          </div>
-          <div class="space-y-4 leading-relaxed text-slate-300">
-            <p>
-              With more than a decade of cross-functional experience, I connect design,
-              strategy, and execution to help brands launch stronger and grow faster.
-            </p>
-            <p>
-              I focus on clear direction, practical systems, and outcomes that are tested
-              in the market, not left as concepts.
-            </p>
-            <div class="flex flex-wrap gap-3 pt-2">
-              <span class="pill">13+ Years Experience</span>
-              <span class="pill">600+ Projects</span>
-              <span class="pill">130+ Reviews</span>
-              <span class="pill">Top Graphic Voice Award</span>
-            </div>
-          </div>
         </div>
       </section>
 

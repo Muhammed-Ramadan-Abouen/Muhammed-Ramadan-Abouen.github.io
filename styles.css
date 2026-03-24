@@ -58,6 +58,73 @@ body {
   background: radial-gradient(circle at center, rgba(157, 165, 255, 0.16), transparent 65%);
 }
 
+.card-anchor {
+  width: 100%;
+  max-width: 25rem;
+  min-height: 23rem;
+}
+
+.hero-card-slot {
+  justify-self: end;
+}
+
+.moving-card {
+  width: 100%;
+  min-height: 23rem;
+  perspective: 1400px;
+  transform-origin: top left;
+  will-change: transform;
+  z-index: 20;
+}
+
+.flip-inner {
+  position: relative;
+  min-height: 23rem;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.about-text-panel {
+  opacity: 0.06;
+  transform: translateX(2.5rem);
+  will-change: opacity, transform;
+}
+
+.about-card-slot {
+  visibility: hidden;
+}
+
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+  }
+}
+
+.about-text-inner {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 20, 32, 0.52);
+  border-radius: 1.5rem;
+}
+
 .section-label {
   margin: 0;
   font-size: 0.72rem;
@@ -209,5 +276,22 @@ body {
   .service-card,
   .project-card {
     transition: none;
+  }
+
+  .moving-card,
+  .flip-inner,
+  .about-text-panel {
+    transition: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .about-card-slot {
+    display: none;
+  }
+
+  .about-text-panel {
+    opacity: 1;
+    transform: none;
   }
 }
