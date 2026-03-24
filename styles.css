@@ -72,7 +72,7 @@ body {
   width: 100%;
   min-height: 23rem;
   perspective: 1400px;
-  transform-origin: top left;
+  transform-origin: center center;
   will-change: transform;
   z-index: 20;
 }

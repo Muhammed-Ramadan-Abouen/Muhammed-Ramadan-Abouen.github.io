@@ -83,7 +83,8 @@ function updateScrollCardAnimation() {
   const progress = clamp((window.scrollY - startY) / range, 0, 1);
   const easedProgress = smoothStep(progress);
 
-  const deltaX = aboutRect.left - heroRect.left;
+  const targetLeft = aboutRect.left + (aboutRect.width - heroRect.width) * 0.5;
+  const deltaX = targetLeft - heroRect.left;
   const deltaY = aboutRect.top - heroRect.top;
   const floatLift = -18 * Math.sin(easedProgress * Math.PI);
   const moveX = deltaX * easedProgress;
