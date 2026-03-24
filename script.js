@@ -77,8 +77,8 @@ function updateScrollCardAnimation() {
   const heroRect = heroCardAnchor.getBoundingClientRect();
   const aboutRect = aboutCardAnchor.getBoundingClientRect();
   const startY =
-    heroRect.top + window.scrollY + Math.max(heroRect.height * 0.18, window.innerHeight * 0.1);
-  const endY = aboutRect.top + window.scrollY - window.innerHeight * 0.36;
+    heroRect.top + window.scrollY + Math.max(heroRect.height * 0.04, window.innerHeight * 0.02);
+  const endY = aboutRect.top + window.scrollY - window.innerHeight * 0.26;
   const range = Math.max(endY - startY, 1);
   const progress = clamp((window.scrollY - startY) / range, 0, 1);
   const easedProgress = smoothStep(progress);
