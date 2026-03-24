@@ -94,6 +94,15 @@ body {
 .flip-back {
   transform: rotateY(180deg);
   overflow: hidden;
+  background: rgba(9, 13, 22, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 0;
+}
+
+.flip-back-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-text-panel {
