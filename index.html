@@ -1,413 +1,321 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap tutorial</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio landing page for a creative designer and founder."
+    />
+    <title>Alex Carter | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#07090f",
+              panel: "#0f1420",
+              accent: "#6d79ff",
+              accentSoft: "#9da5ff",
+              muted: "#9aa7c2",
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(157,165,255,0.25), 0 20px 60px rgba(32,38,92,0.35)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="bg-bg text-white antialiased">
+    <div class="site-bg" aria-hidden="true"></div>
 
-    <!--navbar logo -->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-    <div class="container">
-      <a href="#" class="navbar-brand">Frontend</a>
-<!--navbar button toggler-->
-      <button class="navbar-toggler"
-       type="button" 
-       data-bs-toggle="collapse" 
-       data-bs-target="#navmenu"> 
-
-        <span class="navbar-toggler-icon"></span>
-
-      </button>
-<!--the menu in the navbar inside a container inside a container -->
-      <div class="collapse navbar-collapse"id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ABOUT" class="nav-link">ABOUT US</a>
-          </li>
-          <li class="nav-item">
-            <a href="#learn" class="nav-link">WHY US</a>
-          </li>
-        </ul>
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#home" class="text-lg font-semibold tracking-wide">Alex Carter</a>
+        <button
+          id="menu-toggle"
+          class="inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-sm md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+        <nav class="hidden items-center gap-8 text-sm md:flex">
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#testimonials">Reviews</a>
+          <a
+            href="#contact"
+            class="rounded-full bg-accent px-4 py-2 font-medium text-white transition hover:bg-accentSoft"
+            >Contact</a
+          >
+        </nav>
       </div>
-    </div>
-  </nav>
-
-
-    <!--section show case -->
-    <section class="bg-dark text-light text-md-center p-md-5  pt-5 text-md-start"id="HOME">
-      <div class="container">
-        <div class="d-md-flex">
-          <div class="pt-5 mt-5 ">
-<h1 class="text-center">become a <span class="text-warning ">web developer</span></h1>
-        <p class="lead my-4 textshowcase ">
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat veritatis ab repellendus enim praesentium sit debitis dicta sapiente earum voluptates quibusdam magni, distinctio alias voluptas aut laudantium accusamus eaque consequatur.
-        </p>
-        <button class="btn btn-warning btn-lg mb-4 buttonenroll" data-bs-toggle="modal" data-bs-target="#enroll">Enroll now</button>
-          </div>
-          <img class="img-fluid w-50 ps-md-5" src="img/img showcase top.png"  alt="">
-        </div>
-
+      <div id="mobile-menu" class="hidden border-t border-white/10 px-6 pb-4 md:hidden">
+        <nav class="flex flex-col gap-3 pt-4 text-sm">
+          <a class="mobile-link" href="#services">Services</a>
+          <a class="mobile-link" href="#about">About</a>
+          <a class="mobile-link" href="#work">Work</a>
+          <a class="mobile-link" href="#experience">Experience</a>
+          <a class="mobile-link" href="#testimonials">Reviews</a>
+          <a
+            href="#contact"
+            class="mt-2 inline-flex w-fit rounded-full bg-accent px-4 py-2 font-medium transition hover:bg-accentSoft"
+            >Contact</a
+          >
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!--subscribe -->
-    <section class=" text-light p-4" style="background-color: rgb(161, 0, 161);">
-      <div class="container">
-        <div class="d-md-flex justify-content-between align-items-center">
-          <h2 class="mb-3 mb-md-0">Sign up for our news letter</h2>
-          <div class="input-group news-input">
-            <input type="text" 
-            class="form-control" 
-            placeholder="Enter Email" />
-            <button class="btn btn-dark btn-lg " type="button">Submit</button>
-
-          </div>
-        </div>
-        
-      </div>
-    </section>
-   
-    <!--Boxs-->
-  <section class="p-4 mt-5 mx-sm-5">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md pb-sm-5  ">
-          <div class="bg-dark text-light rounded-5 " >
-            <div class="card-body text-center py-5 mb-3 " >
-              <div class="h1">
-            <i class="bi bi-laptop mb-3"style="color: orange;" ></i>
-              </div>
-              <h4 class="card-title mb-3">
-                Visual Web job
-              </h4>
-              <p class="card-text px-4 pb-2 ">
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, officia. Alias, deserunt nisi sed sapiente ea sequi velit!
-             </p>
-              <a href="" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md pb-sm-5"> 
-          <div class=" text-light rounded-5" style="background-color: rgb(255, 190, 69);" >
-          <div class="card-body text-center py-5 mb-3" >
-            <div class="h1">
-          <i class="bi bi-person-circle mb-3" style="color: black;" ></i>
-            </div>
-            <h4 class="card-title mb-3 text-dark">
-              Data Basing dev
-            </h4>
-            <p class="card-text px-4 pb-2 text-dark">
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, officia. Alias, deserunt nisi sed sapiente ea sequi velit!
-           </p>
-            <a href="" class="btn btn-dark">Read More</a>
-          </div>
-        </div>
-      </div>
-        <div class="col-md">
-          <div class="bg-dark text-light rounded-5" >
-            <div class="card-body text-center py-5 mb-3" >
-              <div class="h1">
-            <i class="bi bi-gear mb-3"style="color: orange;" ></i>
-              </div>
-              <h4 class="card-title mb-3">
-                Support Team
-              </h4>
-              <p class="card-text px-4 pb-2">
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, officia. Alias, deserunt nisi sed sapiente ea sequi velit!
-             </p>
-              <a href="" class="btn btn-warning">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--About us-->
-  <section class="p-5 mt-5" id="ABOUT">
-    <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-md">
-            <img src="img/about.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-md p-md-5  ">
-            <h2 >About us</h2>
-              <p class="lead aboutusjus">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At deleniti eius delectus.
-              </p>
-              <p class="aboutusjus" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eaque voluptas assumenda? Accusamus nobis exercitationem quidem, autem reiciendis ducimus adipisci! Sunt enim in dolor voluptatum laudantium cumque debitis blanditiis.
-              </p>
-              <ul >
-                <li class="licolor">Lorem ipsum dolor sit. </li>
-                <li class="licolor">Lorem ipsum dolor sit sermabrm togar. </li>
-                <li class="licolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-              </ul>
-              
-              <a href="" class="btn btn-warning mt-3" style="margin-bottom: 30px;">
-                <i class="bi bi-chevron-compact-right"></i>
-                Read More
-              </a>
-
-              
-          </div>
-        </div>
-    </div>
-  </section>
-<!--experience-->
-
-<section class="p-md-5 mt-5 bg-dark text-light " id="ABOUT">
-  <div class="container">
-      <div class="row align-items-center justify-content-between">
-       
-        <div class="col-md p-5 ">
-          <h2 >Experiences</h2>
-            <p class="lead aboutusjus">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At deleniti eius delectus.
+    <main>
+      <section id="home" class="mx-auto max-w-6xl px-6 pb-20 pt-20 lg:px-8 lg:pt-24">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div>
+            <p class="text-sm uppercase tracking-[0.24em] text-muted">
+              Award Winning Creative Leader
             </p>
-            <p class="aboutusjus">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eaque voluptas assumenda? Accusamus nobis exercitationem quidem, autem reiciendis ducimus adipisci! Sunt enim in dolor voluptatum laudantium cumque debitis blanditiis.
+            <h1 class="mt-5 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              Portfolio for
+              <span class="text-gradient">Design, Product & Growth</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+              I partner with founders and teams to build standout digital experiences.
+              From concept to launch, every project is crafted for clarity, conversion,
+              and measurable business impact.
             </p>
-            <ul >
-              <li class="licolor">Lorem ipsum dolor sit. </li>
-              <li class="licolor">Lorem ipsum dolor sit sermabrm togar. </li>
-              <li class="licolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-            </ul>
-            
-            <a href="" class="btn btn-warning mt-3" style="margin-bottom: 30px;">
-              <i class="bi bi-chevron-compact-right"></i>
-              Read More
-            </a>
-            
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="rounded-full bg-accent px-6 py-3 text-sm font-semibold transition hover:bg-accentSoft"
+                >Schedule a call</a
+              >
+              <button
+                id="copy-email"
+                class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold transition hover:border-accentSoft hover:text-accentSoft"
+                data-email="alex@portfolio.dev"
+              >
+                Copy email
+              </button>
+              <a
+                href="#work"
+                class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold transition hover:border-accentSoft hover:text-accentSoft"
+                >View work</a
+              >
+            </div>
+          </div>
+          <aside class="hero-card rounded-3xl border border-white/10 bg-panel/80 p-8 shadow-glow">
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Based in</p>
+            <p class="mt-2 text-2xl font-semibold">Skopje, Macedonia</p>
+            <p class="mt-1 text-sm text-slate-300">00:00 GMT +2</p>
+            <div class="mt-8 space-y-4 text-sm">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <span class="text-muted">Years experience</span>
+                <span class="font-medium">13+</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <span class="text-muted">Successful projects</span>
+                <span class="font-medium">600+</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <span class="text-muted">Client reviews</span>
+                <span class="font-medium">130+</span>
+              </div>
+              <div class="flex items-center justify-between pb-1">
+                <span class="text-muted">Satisfaction</span>
+                <span class="font-medium">100%</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-            
+      <section id="services" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <div class="mb-10 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="section-label">Services, Skills, Abilities</p>
+            <h2 class="section-title">What I do best</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-relaxed text-slate-300">
+            I lead design and growth across websites, product experiences, visuals, and
+            campaigns so teams can launch faster and scale with confidence.
+          </p>
         </div>
-        <div class="col-md">
-          <img src="img/home_pic.png" alt="" class="img-fluid">
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="service-card">
+            <p class="service-kicker">Top performing</p>
+            <h3 class="service-title">01. Web Design</h3>
+            <p class="service-copy">
+              Responsive, SEO-ready websites focused on usability, speed, and modern
+              conversion patterns.
+            </p>
+            <p class="service-stack">Figma, Framer, Webflow, Vercel, WordPress</p>
+          </article>
+          <article class="service-card">
+            <p class="service-kicker">MVP Go-to-market</p>
+            <h3 class="service-title">02. Product Design</h3>
+            <p class="service-copy">
+              Product concepts turned into launch-ready systems with clear flows,
+              positioning, and investor-ready materials.
+            </p>
+            <p class="service-stack">MVP Design, Pitch Decks, Brand Identity, GTM</p>
+          </article>
+          <article class="service-card">
+            <p class="service-kicker">User focused</p>
+            <h3 class="service-title">03. UI/UX Systems</h3>
+            <p class="service-copy">
+              Research-backed wireframes and prototypes that reduce friction and align
+              with user behavior.
+            </p>
+            <p class="service-stack">Journey maps, Prototypes, Testing, Design systems</p>
+          </article>
+          <article class="service-card">
+            <p class="service-kicker">Data backed decisions</p>
+            <h3 class="service-title">04. Digital Marketing</h3>
+            <p class="service-copy">
+              Search, social, and email strategies designed for measurable lead growth and
+              sustainable ROI.
+            </p>
+            <p class="service-stack">GA4, Google Ads, Meta Ads, HubSpot, Mailchimp</p>
+          </article>
         </div>
-      </div>
-  </div>
-</section>
-<!--questions accordation-->
-<section id="questions" class="p-5">
-  <div class="container">
-    <h2 class="text-center m-4">Frequently Asked Questions:</h2>
-    <div class="accordion accordion-flush " id="questions">
-      <!--flush 1-->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one" >
-            Where are you located #1
-          </button>
-        </h2>
-        <div id="question-one" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia asperiores nulla rerum tempora autem inventore consequatur quisquam delectus?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam facere iusto autem!.</div>
-        </div>
-      </div>
-       <!--flush 2-->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two" >
-            your quality certificates?
-          </button>
-        </h2>
-        <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe et ab animi dolore cupiditate? Qui consequatur aperiam illum nesciunt deserunt! Minima velit deserunt voluptatum eius temporibus, recusandae laudantium, fugit et cupiditate a explicabo totam animi.</div>
-        </div>
-      </div>
-       <!--flush 3-->
-       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three" >
-            how long you did the job ?
-          </button>
-        </h2>
-        <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe et ab animi dolore cupiditate? Qui consequatur aperiam illum nesciunt deserunt! Minima velit deserunt voluptatum eius temporibus, recusandae laudantium, fugit et cupiditate a explicabo totam animi.</div>
-        </div>
-      </div>
-       <!--flush 4-->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four">
-            what language do you use ? #4
-          </button>
-        </h2>
-        <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-        </div>
-      </div>
-       <!--flush 5-->
-       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-five">
-            if we hire you when will you start ? #5
-          </button>
-        </h2>
-        <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--cards-->
-<section id="instructors" class="p-5" style="background-color:rgb(161, 0, 161);">
-  <div class="container pt-4">
-    <h2 class="text-center text-white mb-4">Our Instructors</h2>
-    <p class="lead  text-md-center text-white mb-5 px-md-5 instructor">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias doloribus corporis et maiores temporibus harum deserunt illo fugit vitae nostrum laudantium excepturi, magnam deleniti voluptatibus, exercitationem, veritatis amet! Eligendi reprehenderit enim modi unde, quo assumenda quod minus, impedit fugit at, illo nostrum nulla neque! Nam!namrador keykarna bora!
-    </p>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="card bg-light">
-          <div class="card-body text-center py-5">
-            <img src="img/home_pic.png" alt=""class="rounded-circle mb-3 img-fluid  " style="width: 100px;">
-            <h5 class="card-title">HTML </h5>
-          <p class="card-text px-3" style="text-align: justify;">Lorem ipsum dolor sit amet contur,  elit. Bltiis laore, qui impet tempa sit volus Lom ium accium dolor srita mar kram de froto elquafiere.</p>
-          <a href="#"><i class="bi bi-twitter text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-facebook text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-instagram text-warning mx-1"></i></a>
+      </section>
+
+      <section id="about" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <div class="grid gap-10 rounded-3xl border border-white/10 bg-panel/50 p-8 md:p-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p class="section-label">About</p>
+            <h2 class="section-title">Creative at the core</h2>
+            <p class="mt-5 text-slate-300">
+              Designer. Marketer. Founder. Problem-solver.
+            </p>
+          </div>
+          <div class="space-y-4 leading-relaxed text-slate-300">
+            <p>
+              With more than a decade of cross-functional experience, I connect design,
+              strategy, and execution to help brands launch stronger and grow faster.
+            </p>
+            <p>
+              I focus on clear direction, practical systems, and outcomes that are tested
+              in the market, not left as concepts.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <span class="pill">13+ Years Experience</span>
+              <span class="pill">600+ Projects</span>
+              <span class="pill">130+ Reviews</span>
+              <span class="pill">Top Graphic Voice Award</span>
+            </div>
           </div>
         </div>
-      </div>
-      <!--cards 2-->
-      <div class="col-md-6 col-lg-3">
-        <div class="card bg-light">
-          <div class="card-body text-center py-5">
-            <img src="img/UI-UX.jpg" alt=""class="rounded-circle mb-3 img-fluid  " style="width: 100px;">
-            <h5 class="card-title">CSS </h5>
-          <p class="card-text px-3" style="text-align: justify;">Lorem ipsum dolor sit amet contur,  elit. Bltiis laore, qui impet tempa sit volus Lom ium accium dolor srita mar kram de froto elquafiere.</p>
+      </section>
 
-          <a href="#"><i class="bi bi-twitter text-warning mx-1 "></i></a>
-          <a href="#"><i class="bi bi-facebook text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-instagram text-warning mx-1"></i></a>
+      <section id="work" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <div class="mb-10 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="section-label">Portfolio Projects</p>
+            <h2 class="section-title">Selected Work Samples</h2>
+          </div>
+          <a
+            href="#contact"
+            class="rounded-full border border-white/20 px-5 py-2 text-sm font-semibold transition hover:border-accentSoft hover:text-accentSoft"
+            >Request full portfolio</a
+          >
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="project-card">
+            <div class="project-thumb project-thumb-one"></div>
+            <h3>Startup SaaS Website</h3>
+            <p>Conversion-led website redesign with CMS and performance optimization.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb project-thumb-two"></div>
+            <h3>Fintech Product UX</h3>
+            <p>Onboarding and dashboard UX for improved activation and retention.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb project-thumb-three"></div>
+            <h3>Brand Campaign System</h3>
+            <p>Visual identity and paid social assets for a multi-channel launch.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <p class="section-label">Career</p>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="mt-8 space-y-4">
+          <article class="timeline-item">
+            <p class="timeline-role">Creative Designer</p>
+            <p class="timeline-meta">TryHackMe LLC · 2025 - Current</p>
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-role">Founder / Creative Director</p>
+            <p class="timeline-meta">DirectlyNik · 2023 - Current</p>
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-role">Head of Design</p>
+            <p class="timeline-meta">Involve · 2024 - 2025</p>
+          </article>
+          <article class="timeline-item">
+            <p class="timeline-role">Chief Digital Marketing Executive</p>
+            <p class="timeline-meta">Simplify-ERP · 2021 - 2023</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="testimonials" class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
+        <p class="section-label">Community Trust</p>
+        <h2 class="section-title">What people say</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <blockquote class="testimonial">
+            "Fast, reliable, and talented. He turned a vague brief into a polished
+            product."
+            <footer>- Tomas, Branding</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            "Clear communication, sharp decisions, and excellent execution from day one."
+            <footer>- Siraj, Webflow Design</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            "The design quality and strategic thinking made an immediate business impact."
+            <footer>- Leandro, Web Design</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl px-6 pb-20 pt-14 lg:px-8">
+        <div class="rounded-3xl border border-white/10 bg-panel/70 p-8 md:p-10">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Let’s build something meaningful</h2>
+          <p class="mt-4 max-w-2xl text-slate-300">
+            Available for select projects in web design, product design, and digital
+            marketing strategy.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="mailto:alex@portfolio.dev"
+              class="rounded-full bg-accent px-6 py-3 text-sm font-semibold transition hover:bg-accentSoft"
+              >alex@portfolio.dev</a
+            >
+            <a
+              href="#home"
+              class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold transition hover:border-accentSoft hover:text-accentSoft"
+              >Back to top</a
+            >
           </div>
         </div>
-      </div>
-      <!--cards 3-->
-      <div class="col-md-6 col-lg-3">
-        <div class="card bg-light">
-          <div class="card-body text-center py-5">
-            <img src="img/about.png" alt=""class="rounded-circle mb-3 img-fluid  " style="width: 100px;">
-            <h5 class="card-title">BootStrap </h5>
-          <p class="card-text px-3" style="text-align: justify;">Lorem ipsum dolor sit amet contur,  elit. Bltiis laore, qui impet tempa sit volus Lom ium accium dolor srita mar kram de froto elquafiere.</p>
-          <a href="#"><i class="bi bi-twitter text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-facebook text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-instagram text-warning mx-1"></i></a>
-          </div>
-        </div>
-      </div>
-      <!--cards 4-->
-      <div class="col-md-6 col-lg-3">
-        <div class="card bg-light">
-          <div class="card-body text-center py-5">
-            <img src="img/img showcase top.png" alt=""class="rounded-circle mb-3 img-fluid  " style="width:100px; height: 100px;">
-            <h5 class="card-title">MySQL </h5>
-          <p class="card-text px-3" style="text-align: justify;">Lorem ipsum dolor sit amet contur,  elit. Bltiis laore, qui impet tempa sit volus Lom ium accium dolor srita mar kram de froto elquafiere.</p>
-          <a href="#"><i class="bi bi-twitter text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-facebook text-warning mx-1"></i></a>
-          <a href="#"><i class="bi bi-instagram text-warning mx-1"></i></a>
-          </div>
-        </div>
-      </div>
-        </div>
-  </div>
-</section>
-<br>
-<br>
-<!--contact and map-->
-<section class="p-5">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg">
-        <h3 class="text-center mb-4" style="padding-top:40px;"> Contact Info</h2>
-        <ul class="list-group list-group-flush " style="font-size: 20px; ">
-          <li class="list-group-item">
-            <span class="fw-bold">Main location : </span>Tripoli Zawiyat al-dahmani ST43
-          </li>
-          <li class="list-group-item">
-            <span class="fw-bold">Phone Number : </span>09X-XXXXXXX
-          </li>
-          <li class="list-group-item">
-            <span class="fw-bold">Email Address : </span>info@gmail.com
-          </li>
-          <li class="list-group-item">
-            <span class="fw-bold">Social interactions : </span>Telegram & Whatsapp
-          </li>
-          <li class="list-group-item">
-            <span class="fw-bold">Our Goal : </span>To Learn web-app development
-          </li>
-        </ul>
-      </div>
-      <div class="col-md  ms-lg-5 ps-5  ">
-        <div class="container ">
-          <img src="img/location-map.jpg" alt=""class="img-fluid imgpaddingtop " style=" border-radius: 20%;">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--footer-->
-<footer class="p-4 bg-dark text-white text-center position-relative">
-  <div class="container">
-    <p class="lead">Copyright &copy; 2023 FrontEnd BootCamp</p>
-  <a href="#" class="position-absolute bottom-0 end-0 p-4">
-    <i class="bi bi-arrow-up-circle h1"></i>
-  </a>
-  </div>
-</footer>
+      </section>
+    </main>
 
-<!-- Modal -->
-<div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="enroll">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <p class="lead">Fill this form and we will reply as soon as possible</p>
-      <form action="">
-        <div class="mb-3">
-          <label for="first-name" class="col-form-label">
-            First Name
-          </label>
-          <input type="text" class="form-control" id="first-name">
-        </div>
-        <div class="mb-3">
-          <label for="Email" class="col-form-label">
-            Email
-          </label>
-          <input type="text" class="form-control" id="Email">
-        </div>
-        <div class="mb-3">
-          <label for="number" class="col-form-label">
-            Phone Number 
-          </label>
-          <input type="number" class="form-control" id="number">
-        </div>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-muted">
+      <p>&copy; <span id="year"></span> Alex Carter. Portfolio landing page.</p>
+    </footer>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
